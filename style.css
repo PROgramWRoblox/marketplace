@@ -1,0 +1,199 @@
+/* Reset i podstawowe ustawienia */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #fcfcfc;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 10%;
+}
+
+/* Nawigacja */
+.nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #27ae60;
+}
+
+.user-badge {
+    background: #e8f5e9;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.btn-register {
+    background: #27ae60;
+    color: white !important;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #27ae60;
+}
+
+/* Statystyki */
+.stats { 
+    display: flex; 
+    justify-content: center; 
+    gap: 80px; 
+    margin: 40px 0; 
+    text-align: center; 
+}
+
+.stats h2 {
+    font-size: 32px;
+    color: #333;
+}
+
+.stats div {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Formularz filtrowania i boxy */
+.filter-box, .form-container {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 30px;
+}
+
+.filter-form {
+    display: flex;
+    gap: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* Układ siatki produktów */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    margin-bottom: 50px;
+}
+
+/* Karta produktu */
+.card { 
+    border: 1px solid #f0f0f0; 
+    padding: 25px; 
+    position: relative; 
+    background-color: white;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card strong {
+    display: block;
+    font-size: 18px;
+    color: #27ae60;
+    margin: 10px 0 5px 0;
+}
+
+/* Tabele (Moje produkty / Historia) */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+    background: #f9f9f9;
+    font-weight: 600;
+}
+
+/* Statusy w tabeli */
+.tag {
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tag-category { background: #e8f5e9; color: #27ae60; position: absolute; top: 15px; right: 15px; }
+.status-dostepny { background: #e8f5e9; color: #27ae60; }
+.status-sprzedany { background: #ffebee; color: #c62828; }
+
+/* Przyciski i Formularze */
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+button {
+    background: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover { background: #219150; }
+button:disabled { background: #f0f0f0; color: #bbb; border: 1px solid #ddd; cursor: not-allowed; }
+
+.btn-buy { width: 100%; }
+.btn-outline { background: transparent; border: 1px solid #27ae60; color: #27ae60; }
+.btn-outline:hover { background: #27ae60; color: white; }
