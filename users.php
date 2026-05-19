@@ -10,7 +10,7 @@ $uzytkownicy = $conn->query("SELECT login, email FROM uzytkownicy");
 <h3>Zarejestrowani użytkownicy</h3>
 <ul>
     <?php while($u = $uzytkownicy->fetch_assoc()): ?>
-        <li><strong><?php echo $u['login']; ?></strong> (<?php echo $u['email']; ?>)</li>
+        <li><strong><?php echo htmlspecialchars($u['login']); ?></strong> (<?php echo htmlspecialchars($u['email']); ?>)</li>
     <?php endwhile; ?>
 </ul>
 <a href="index.php">Powrót</a>
